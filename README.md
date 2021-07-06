@@ -14,3 +14,4 @@ $ remermaid foo.mmd
 # Dependencies
 
 - [inotify-tools](https://archlinux.org/packages/community/x86_64/inotify-tools/)
+- [mermaid-cli](https://github.com/mermaid-js/mermaid-cli)
