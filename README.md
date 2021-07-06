@@ -1,6 +1,6 @@
 # Remermaid
 
-Simple shellscript hotreload mermaid files in your image viewer of choice.
+Simple shellscript to hotreload mermaid files in your image viewer of choice.
 
 # How to use
 
@@ -13,4 +13,4 @@ $ remermaid foo.mmd
 
 # Dependencies
 
-- (inotify-tools)[ https://archlinux.org/packages/community/x86_64/inotify-tools/ ]
+- [inotify-tools](https://archlinux.org/packages/community/x86_64/inotify-tools/)
