@@ -6,7 +6,7 @@ if [[ -z $input_file ]]; then
   exit 1
 fi
 
-image_viewer=$2
+image_viewer=$3
 if [[ -z $image_viewer ]]; then
   echo "Image viewer not defined. Defaulting to Eye of Gnome image viewer"
   image_viewer="eog"
@@ -16,8 +16,14 @@ tmpfile=$(mktemp /tmp/remermaid-tmp.XXXXXX.png)
 echo "Input file: $input_file";
 trap "rm -f $tmpfile" EXIT
 
+background=$2
+
+if [[ -z $background ]]; then
+  background=transparent
+fi
+
 mermaid() {
-  mmdc -i $1 -o $2 -b transparent;
+  mmdc -i $1 -o $2 -b "$($background)";
 }
 
 mermaid $input_file $tmpfile;
